@@ -11,9 +11,10 @@ import React from "react";
 //   );
 // };
 
-const Card = ({ name, phone, email }) => {
+const Card = ({ name, phone, email, imgURL }) => {
   return (
     <div className="card">
+      <img src={imgURL} alt={name} />
       <h3>{name}</h3>
       <p>{phone}</p>
       <p>{email}</p>

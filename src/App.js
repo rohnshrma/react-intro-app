@@ -21,6 +21,7 @@ const App = () => {
                     name={userObj.name}
                     phone={userObj.phone}
                     email={userObj.email}
+                    imgURL={userObj.imgURL}
                     key={userObj.id}
                   />
                 );
