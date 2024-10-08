@@ -10,13 +10,13 @@ header {
   background: linear-gradient(teal, rgb(15, 150, 150));
   padding: 1rem;
 }
-
+/* 
 .cards {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-}
-
+} */
+/* 
 .card {
   text-align: center;
   background-color: #fff;
@@ -31,4 +31,4 @@ header {
   height: 100px;
   width: 100px;
   margin-bottom: 1rem;
-}
+} */
