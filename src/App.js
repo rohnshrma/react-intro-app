@@ -2,17 +2,18 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Header from "./Components/Header";
-import Counter from "./Components/Counter";
-import Timer from "./Components/Timer";
+// import Counter from "./Components/Counter";
+// import Timer from "./Components/Timer";
+import CreateForm from "./Components/CreateForm.js";
 
 const App = () => {
   return (
     <div>
       <Header />
-
       <main>
         {/* <Counter /> */}
-        <Timer />
+        {/* <Timer /> */}
+        <CreateForm />
       </main>
     </div>
   );
