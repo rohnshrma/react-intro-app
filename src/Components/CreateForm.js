@@ -1,18 +1,14 @@
 import { useState } from "react";
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, Container } from "react-bootstrap";
 
-const CreateForm = () => {
+const CreateForm = (props) => {
+  // console.log(props);
+
   // these state gets updated on typing (onChange)
   var [nameText, setNameText] = useState("");
   var [emailText, setEmailText] = useState("");
-  var [PhoneText, setPhoneText] = useState("");
-
-  // these state gets updated on form submissiob (onSubmit)
-  var [name, setName] = useState("");
-  var [email, setEmail] = useState("");
-  var [phone, setPhone] = useState("");
-
-  // this state gets updated on form submissiob (onSubmit)
+  var [phoneText, setPhoneText] = useState("");
+  var [URLText, setURLText] = useState("");
 
   const nameChangehandler = (e) => {
     const nameInput = e.target.value;
@@ -26,46 +22,61 @@ const CreateForm = () => {
     const phoneInput = e.target.value;
     setPhoneText(phoneInput);
   };
+  const urlChangehandler = (e) => {
+    const urlInput = e.target.value;
+    setURLText(urlInput);
+  };
 
   const submitHandler = (e) => {
     e.preventDefault();
-    setName(nameText);
-    setEmail(emailText);
-    setPhone(PhoneText);
+
+    const userObj = {
+      name: nameText,
+      email: emailText,
+      phone: phoneText,
+      imgURL: URLText,
+    };
+
+    props.onAdd(userObj);
   };
 
   return (
-    <div>
-      <h2>{name}</h2>
-      <p>{email}</p>
-      <p>{phone}</p>
+    <Container className="my-3 createform">
+      <h2>Add New User</h2>
       <Form onSubmit={submitHandler}>
-        <Form.Group>
+        <Form.Group className="my-3">
           <Form.Control
             onChange={nameChangehandler}
             type="text"
             placeholder="Enter your name : "
           />
         </Form.Group>
-        <Form.Group>
+        <Form.Group className="my-3">
           <Form.Control
             onChange={emailChangehandler}
             type="email"
             placeholder="Enter Email : "
           />
         </Form.Group>
-        <Form.Group>
+        <Form.Group className="my-3">
           <Form.Control
             onChange={phoneChangehandler}
             type="text"
             placeholder="Enter phone : "
           />
         </Form.Group>
+        <Form.Group className="my-3">
+          <Form.Control
+            onChange={urlChangehandler}
+            type="text"
+            placeholder="Enter profile picture URL : "
+          />
+        </Form.Group>
         <Button type="submit" variant="primary">
           Submit
         </Button>
       </Form>
-    </div>
+    </Container>
   );
 };
 

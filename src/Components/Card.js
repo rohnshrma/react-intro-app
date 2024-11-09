@@ -11,9 +11,9 @@ import React from "react";
 //   );
 // };
 
-const Card = ({ name, phone, email, imgURL }) => {
+const UserCard = ({ name, phone, email, imgURL }) => {
   return (
-    <div className="card">
+    <div className="user-card">
       <img src={imgURL} alt={name} />
       <h3>{name}</h3>
       <p>{phone}</p>
@@ -22,4 +22,4 @@ const Card = ({ name, phone, email, imgURL }) => {
   );
 };
 
-export default Card;
+export default UserCard;
