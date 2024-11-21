@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Form, Button, Container } from "react-bootstrap";
+import { v4 as uuidv4 } from "uuid";
 
 const CreateForm = (props) => {
   // console.log(props);
@@ -31,6 +32,7 @@ const CreateForm = (props) => {
     e.preventDefault();
 
     const userObj = {
+      id: uuidv4(),
       name: nameText,
       email: emailText,
       phone: phoneText,

@@ -10,6 +10,9 @@ header {
   background: linear-gradient(teal, rgb(15, 150, 150));
   padding: 1rem;
 }
+p {
+  margin-bottom: 0;
+}
 /* 
 .cards {
   display: flex;
@@ -32,3 +35,34 @@ header {
   width: 100px;
   margin-bottom: 1rem;
 } */
+
+.createform {
+  margin-bottom: 5rem;
+  text-align: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.user-card {
+  margin-bottom: 3rem;
+  text-align: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+}
