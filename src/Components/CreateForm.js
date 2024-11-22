@@ -86,14 +86,11 @@ const CreateForm = (props) => {
   // Render the form component
   return (
     <Container className="my-3 createform">
-      {" "}
       {/* Bootstrap container for styling */}
       <h2>Add New User</h2> {/* Form heading */}
       <Form onSubmit={submitHandler}>
-        {" "}
         {/* Handle form submission */}
         <Form.Group className="my-3">
-          {" "}
           {/* Group for the name input */}
           <Form.Control
             onChange={nameChangehandler} // Call nameChangehandler on input change
@@ -102,7 +99,6 @@ const CreateForm = (props) => {
           />
         </Form.Group>
         <Form.Group className="my-3">
-          {" "}
           {/* Group for the email input */}
           <Form.Control
             onChange={emailChangehandler} // Call emailChangehandler on input change
@@ -111,7 +107,6 @@ const CreateForm = (props) => {
           />
         </Form.Group>
         <Form.Group className="my-3">
-          {" "}
           {/* Group for the phone input */}
           <Form.Control
             onChange={phoneChangehandler} // Call phoneChangehandler on input change
@@ -120,7 +115,6 @@ const CreateForm = (props) => {
           />
         </Form.Group>
         <Form.Group className="my-3">
-          {" "}
           {/* Group for the URL input */}
           <Form.Control
             onChange={urlChangehandler} // Call urlChangehandler on input change
@@ -129,7 +123,6 @@ const CreateForm = (props) => {
           />
         </Form.Group>
         <Button type="submit" variant="primary">
-          {" "}
           {/* Submit button */}
           Submit
         </Button>
