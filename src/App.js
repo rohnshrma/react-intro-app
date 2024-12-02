@@ -2,7 +2,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Header from "./Components/Header";
-// import Counter from "./Components/Counter";
+import Counter from "./Components/Counter";
 // import Timer from "./Components/Timer";
 import CreateForm from "./Components/CreateForm.js";
 import { Card, Container } from "react-bootstrap";
@@ -25,7 +25,7 @@ const App = () => {
     <div>
       <Header />
       <main>
-        {/* <Counter /> */}
+        <Counter />
         {/* <Timer /> */}
         <CreateForm onAdd={addUserHandler} />
       </main>
